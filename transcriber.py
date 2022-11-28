@@ -6,6 +6,7 @@ async def transcribe_audio(audio_filepath):
 
     audio_file = open(audio_filepath,'r')
 
+  
     model = whisper.load_model('base')
     response = model.transcribe(audio_file,fp16=False)
 
